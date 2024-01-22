@@ -18,6 +18,7 @@ const number2 = new Number(5);
 
 const string = 'js intensive 33';
 const string2 = new String('js intensive 33');
+const string3 = (33 + 'JSintensive'); // при конкатенации число преобразуется в строку
 
 const isTrue = true;
 const isFalse = false;
@@ -29,11 +30,14 @@ const isFalse3 = 2 < 1;
 const nullValue = null;
 
 const undefinedValue = undefined;
-const undefinedValue2;
+let undefinedValue2;
+(function() {})();
+
 // Т.е. получаем undefined при попытке получить доступ к:
 //неинициализированной переменной number,
 //несуществующему свойству объекта,
-//несуществующему элементу массива.
+//несуществующему элементу массива,
+//функции, которая ничего не возвращает.
 
 let bigIntVar = 123456789012345678901234567890n;
 let bigIntVar2 = BigInt('123456789012345678901234567890');
