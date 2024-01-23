@@ -40,8 +40,9 @@ function deepCopy(obj) {
   }
 
   let copy = Array.isArray(obj) ? [] : {};
+  
   for (let key in obj) {
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    if (obj.hasOwnProperty(key)) {
       copy[key] = deepCopy(obj[key]);
     }
   }
