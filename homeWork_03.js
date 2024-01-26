@@ -29,13 +29,10 @@ logger.bind(obj)();
 
 
 // Реализуем полифил для bind
-function bind(func, context) {
-
+Funtion.proptotype.bind = function(context){
+  const func = this;
   return function (...args) {
-    return func.apply(
-      context,
-      args
-    );
+    return func.apply(context,args);
   }
 }
 
